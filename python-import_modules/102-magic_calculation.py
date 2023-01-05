@@ -1,5 +1,5 @@
 #!/user/bin/python3
-def magic_caculation(a,b):
+def magic_calculation(a,b):
     from magic_calculation_102 import add, sub
     if a < b:
         c = add(a, b)
@@ -7,4 +7,4 @@ def magic_caculation(a,b):
             c = add(c, i)
             return (c)
         else:
-            return (sub(a, b))
+            return (sub(a, b)i)
