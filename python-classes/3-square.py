@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """Area of Square"""
 
-
 class Square:
     """Square size"""
     def __init__(self, size=0):
