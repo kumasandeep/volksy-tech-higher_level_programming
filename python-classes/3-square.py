@@ -4,6 +4,7 @@
 
 class Square:
     """class for square"""
+
     def __init__(self, size=0):
         """constructor"""
         if type(size) is not int:
@@ -14,4 +15,4 @@ class Square:
 
     def area(self):
         """area for square"""
-        return(self.__size * self.__size)
+        return (self.__size * self.__size)
