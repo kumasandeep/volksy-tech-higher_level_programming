@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Singly linked list"""
+i"""Singly linked list"""
 
 
 class Node:
@@ -9,10 +9,14 @@ class Node:
         self.data = data
 
     @property
+    """getter the attribute"""
+
     def data(self):
         return self._data
 
     @data.setter
+    """setter the attribute"""
+
     def data(self,value):
         if type(value)!= int:
             raise TypeError("data must be an integer")
@@ -21,10 +25,14 @@ class Node:
         self.next_node = next_node
 
     @property
+    """getter the attribute"""
+
     def next_node(self):
         return self.__next_node
 
     @next_node.setter
+    """setter the attribute"""
+
     def next_node(self,value):
         if next_node!= None:
             raise TypeError("next_node must be a Node object")
