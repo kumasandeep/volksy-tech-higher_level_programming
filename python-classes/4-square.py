@@ -5,7 +5,7 @@
 class Square:
     """String Size"""
 
-    def __init__(self, size=0):
+    def __init__(self,size=0):
             self.size = size
 
     @property
@@ -13,7 +13,7 @@ class Square:
         return self_size
 
     @size.setter
-    def size(self,value):
+    def size(self, value):
         if type(value)!= int:
             raise TypeError("size must be an integer")
         if value < 0:
