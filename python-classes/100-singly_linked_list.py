@@ -1,15 +1,14 @@
-#!/usr/bin/python3
+#!/usr/bin/python
 """Singly linked list"""
 
 
 class Node:
     """List must be printed single"""
+
     def __init__(self,data):
         self.data = data
 
     @property
-    """getter the attribute"""
-
     def data(self):
         return self._data
 
@@ -39,4 +38,3 @@ class Node:
     def __init__(self, data, next_node=None):
         self.data = data
         self.next_node  = None
-
