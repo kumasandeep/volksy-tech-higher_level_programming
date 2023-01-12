@@ -4,7 +4,6 @@
 
 class Node:
     """List must be printed single"""
-
     def __init__(self,data):
         self.data = data
 
