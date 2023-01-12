@@ -2,7 +2,7 @@
     """Update Attribute"""
 
 
-    class Square:
+      class Square:
         """String Size"""
 
         def __init__(self, size=0):
