@@ -4,6 +4,7 @@
 
 class Square:
     """class for square"""
+
     def __init__(self, size=0):
         """constructor"""
         if type(size) is not int:
