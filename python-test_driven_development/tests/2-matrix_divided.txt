@@ -106,4 +106,4 @@ testing how function handles division by incorrect type
 >>> matrix_divided = __import__('2-matrix_divided').matrix_divided
 >>> matrix_divided([[1, 2, 3], [5, 6, 7]], "25")
 Traceback (most recent call last):
-TypeError: div must be a numberi
+TypeError: div must be a number
