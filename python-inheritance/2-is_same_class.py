@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-"""defines class MyList"""
+"""defines function to see if object is exactly an instance of a class"""
 
 
-class MyList(list):
-    """class that inherits from list
-    with public instance method to print sorted list"""
-
-    def print_sorted(self):
-        print(sorted(self))
+def is_same_class(obj, a_class):
+    """returns True if object is exacly an instance of the class"""
+    if type(obj) is a_class:
+        return True
+    else:
+        return False
