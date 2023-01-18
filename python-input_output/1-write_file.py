@@ -11,5 +11,6 @@ def number_of_lines(filename=""):
     Returns:
         Int -- number of lines of a text file.
     """
+    
     with open(filename, mode="r", encoding="utf-8") as file:
         return len(file.readlines())
