@@ -1,2 +1,2 @@
 -- mysql
-SELECT COUNT (*) FROM first_table WHERE id = 89 ;
+Select count(*)From first_table whereb id=89 ; 
