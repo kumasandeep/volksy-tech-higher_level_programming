@@ -1,2 +1,2 @@
 -- mysql
-show databases ;
+Show databases ;
