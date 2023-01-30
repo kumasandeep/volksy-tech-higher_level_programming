@@ -1,2 +1,2 @@
 -- mysql
-DESC first_table ;
+show create TABLE 'first_table';
