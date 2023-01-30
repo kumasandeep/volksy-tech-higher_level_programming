@@ -1,2 +1,2 @@
 -- mysql
-SELECT * FROM second_table score >= 10 ;
+SELECT score,name FROM second_table order by score >= 10 ;
