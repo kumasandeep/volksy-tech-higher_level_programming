@@ -1,16 +1,34 @@
 #!/usr/bin/python3
-from sys import argv
+
+"""This module contains a script that lists all states from hbtn_0e_0_usa"""
+
+
+
+
+import sys
+
 import MySQLdb
-mydb=MySQLdb.connect(host='localhost',
-                          user='argv[0]',
-                          password='argv[1]',
-                          database='hbtn_0e_0_usa',
-                          port=3306)
 
-cur=mydb.cursor()
-wcur.execute("select * from states ORDER BY id ASC")
-for u in cur:
-    print(u)
 
-cur.close()
-connect.close()
+
+
+if __name__ == "__main__":
+
+    conn = MySQLdb.connect(host="localhost", port=3306, user=sys.argv[1],
+
+                           passwd=sys.argv[2], db=sys.argv[3], charset="utf8")
+
+    cur = conn.cursor()
+
+    cur.execute("SELECT * FROM states ORDER BY id ASC")
+
+    query_rows = cur.fetchall()
+
+    for row in query_rows:
+
+        print(row)
+
+    cur.close()
+
+    conn.close()
+
