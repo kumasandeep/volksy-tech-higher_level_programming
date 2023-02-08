@@ -3,8 +3,6 @@
 """This module contains a script that lists all states from hbtn_0e_0_usa"""
 
 
-
-
 import sys
 
 import MySQLdb
