@@ -8,7 +8,7 @@ mydb=MySQLdb.connect(host='localhost',
                           port=3306)
 
 cur=mydb.cursor()
-cur.execute("select * from states order by id asc")
+wcur.execute("select * from states ORDER BY id ASC")
 for u in cur:
     print(u)
 
