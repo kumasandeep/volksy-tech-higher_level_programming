@@ -5,7 +5,6 @@
 import MySQLdb
 from sys import argv
 
-
 if __name__ == "__main__":
     aux_list = []
     conn = MySQLdb.connect(host="localhost", user=argv[1], passwd=argv[2],
