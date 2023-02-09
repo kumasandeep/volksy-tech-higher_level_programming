@@ -1,5 +1,3 @@
- 24 lines (21 sloc)  666 Bytes
-
 #!/usr/bin/python3
 """script that lists all cities from the database hbtn_0e_4_usa
 """
