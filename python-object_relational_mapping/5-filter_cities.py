@@ -1,29 +1,22 @@
 #!/usr/bin/python3
-"""script that takes in the name of a state as an argument and lists all cities
-   of that state, using the database hbtn_0e_4_usa
+"""
+Script the list and filter the name the states
 """
 import MySQLdb
-from sys import argv
+import sys
 
 if __name__ == "__main__":
-    aux_list = []
-    conn = MySQLdb.connect(host="localhost", user=argv[1], passwd=argv[2],
-                           db=argv[3], port=3306)
-    cur = conn.cursor()
-    # , to the end of argv[4] because second paramether is a tuple
-    cur.execute("SELECT c.name \
-                 FROM cities as c \
-                 INNER JOIN states as s \
-                 ON c.state_id = s.id \
-                 WHERE s.name = %s \
-                 COLLATE latin1_general_cs \
-                 ORDER BY c.id ASC;", (argv[4],))
-    query_rows = cur.fetchall()
-
-    for row in query_rows:
-        aux_list.append(row[0])
-    print(", ".join(aux_list))
-    # Close all cursors
-    cur.close()
-    # Close all databases
-    conn.close()
+    username = sys.argv[1]
+    pas = sys.argv[2]
+    dbx = sys.argv[3]
+    statex = sys.argv[4]
+    db = MySQLdb.connect(host="localhost", port=3306,
+                         user=username, passwd=pas, db=dbx)
+    cur = db.cursor()
+    cur.execute("SELECT cities.name FROM cities WHERE cities.state_id\
+                 IN (SELECT id FROM states WHERE name=%s)\
+                 ORDER BY cities.id", (statex, ))
+    rows = cur.fetchall()
+    print(", ".join(city[0] for city in rows))
+    cur.close()
+    db.close()
