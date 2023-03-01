@@ -3,4 +3,5 @@
 class Rectangle {
   // class methods
 }
+
 module.exports = Rectangle;
